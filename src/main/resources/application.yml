@@ -1,0 +1,23 @@
+server:
+  port: 9000
+
+logging:
+  level:
+    root: DEBUG
+
+spring:
+  security:
+    basic:
+      enabled: false
+    oauth2:
+      client:
+        registration:
+          facebook:
+            clientId: 1247520388755362
+            clientSecret: 702b1ac579a1e9773c41839f8fb71944
+          github:
+            clientId: 3a187a7cf91ebbf5d907
+            clientSecret: b7569f7c37c6d94faa978899eca646976e1cef40
+          google:
+            clientId: 928373256663-90j4tg9d7ihsaed1l053bq2hbjtnll32.apps.googleusercontent.com
+            clientSecret: mTrpMgyLQDPp2RscMf3Dsj0T
