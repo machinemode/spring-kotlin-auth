@@ -1,11 +1,14 @@
-server:
-  port: 9000
+management:
+  endpoints:
+    enabled-by-default: false
+  endpoint:
+    health:
+      enabled: true
 
-logging:
-  level:
-    root: DEBUG
 
 spring:
+  mvc:
+    favicon.enabled: false
   security:
     basic:
       enabled: false
@@ -21,3 +24,32 @@ spring:
           google:
             clientId: 928373256663-90j4tg9d7ihsaed1l053bq2hbjtnll32.apps.googleusercontent.com
             clientSecret: mTrpMgyLQDPp2RscMf3Dsj0T
+server:
+  error:
+    whitelabel.enabled: false
+  port: 9000
+  servlet:
+    contextPath: /
+
+logging:
+  level:
+    root: WARN
+    org.springframework.security: WARN
+
+app:
+  auth:
+    clientId: foo
+    scopes:
+    - openid
+    grantTypes:
+    - implicit
+    redirectUris:
+    - "http://localhost:3000/implicit/callback"
+    - "http://localhost:3000/silent-renew"
+    accessTokenValiditySeconds: 900
+    loginPage: "/oauth2/authorization/google"
+  keystore:
+    file: keystore.jks
+    name: keystore
+    password: password
+

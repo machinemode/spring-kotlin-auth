@@ -1,11 +1,11 @@
-package com.machinemode.uaa
+package com.machinemode.auth
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class UaaApplication
+class Application
 
 fun main(args: Array<String>) {
-    runApplication<UaaApplication>(*args)
+    runApplication<Application>(*args)
 }
