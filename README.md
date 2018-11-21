@@ -66,4 +66,10 @@ To Debug, you first need to create a *Debug Configuration*. The simplest way is 
 
 You should now have a Debug Configuration available to reuse later.
 
+## Public key
+The keystore used by the token converter can be found in `src/main/resources/`. 
 
+Using 'password' as the keystore password, you can get the public key via:
+```bash
+keytool -list -rfc --keystore src/main/resources/keystore.jks | openssl x509 -inform pem -pubkey -noout
+```
